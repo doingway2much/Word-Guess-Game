@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+.container { 
+    margin: 0 auto;
+    word-wrap: break-word;
+}
+.jumbotron-fluid {
+    background-image: url("../img/90sGame2.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    color: white;
+    margin-bottom: 5px;    
+}
+
+.col-md-3 {
+    color: white;
+
+}
+.col-md-6 {
+    color: white;
+}
