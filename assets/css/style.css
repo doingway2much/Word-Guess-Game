@@ -16,10 +16,12 @@ body {
 
 .col-md-3 {
     color: white;
+    background-color: #434343
 
 }
 .col-md-6 {
     color: white;
+    background-color: #434343
 }
 #selected {
     font-size: 30px;
