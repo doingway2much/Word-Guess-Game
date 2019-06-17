@@ -1,30 +1,80 @@
 body {
-    background-color: black;
+    background-image: url("../img/map2.JPG");
+    background-size: cover;
 }
 
-.container { 
+p {
+    word-wrap: break-word;
+}
+.main {
+    max-width: 950px;
+    margin: 0 auto;
+}
+h1 {
+    color: greenyellow;
+    text-shadow: 3px 3px 3px fuchsia;
+    font-family: 'Bevan', cursive;
+}
+
+.lead {
+    color: greenyellow;
+    text-shadow: 3px 3px 3px fuchsia;
+    font-family: 'Bevan', cursive;
+
+}
+#hint {
+    font-weight: bold;
+}
+.card-custom {
+    color: greenyellow;
+    text-shadow: 1px 1px fuchsia;
+    font-family: 'Bevan', cursive;
+
+}
+.container-fluid { 
+    max-width: 1000px;
     margin: 0 auto;
     word-wrap: break-word;
 }
 .jumbotron-fluid {
+    margin: 0;
     background-image: url("../img/90sGame2.jpg");
     /* background-repeat: no-repeat; */
+    /* width: auto; */
     background-size: cover;
     color: white;
     margin-bottom: 15px;    
 }
 
+#brick {
+    background-image: url("../img/bricks.jpg");
+}
+.card {
+    width: 950px;
+}
+.row {
+    margin: 0;
+    margin-top: 15px;
+}
 .col-md-3 {
-    color: white;
-    background-color: #434343
+    background-color: black;
+    /* background-color: #434343; */
 
 }
-.col-md-6 {
-    color: white;
-    background-color: #434343
+.col-md-4 {
+    margin-top; 15px;
+    /* color: white; */
+    width: auto;
+    background-color: black;
 }
 #selected {
-    font-size: 30px;
+    color: greenyellow;
+    font-family: 'Bevan', cursive;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 50px;
+    text-align: center;
+    
 }
 #remaining {
     color: white;

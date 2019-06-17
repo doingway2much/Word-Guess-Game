@@ -101,7 +101,7 @@ var songs = [
         if(songs[1] === randomSong[0]) {
             underScore = [];
             var song2Selected = document.getElementById("game");
-            song2Selected.textContent = "Here's yoru first hint: " + [song2.fact1];
+            song2Selected.textContent = [song2.fact1];
             for (var i = 0; i < song2.title.length; i++) {
                 underScore.push ("_");
                 }

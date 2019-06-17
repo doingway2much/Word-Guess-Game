@@ -1,7 +1,4 @@
-
-
 // Song Data for the first 5 songs
-
 var songs = [
     {
         title: "still not a player",
@@ -59,7 +56,7 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var underScore = [];
 var numSpaces = 0;
 var progress = [];
-var numGuess = 20;
+var numGuess = 15;
 // var getRandomSong = "";
 
 // Gets lists of song titles from the object
@@ -72,19 +69,27 @@ getList();
 
 // Sets origonal value to wrong button
 var looserButtonStart = document.getElementById("wrong");
-        looserButtonStart.textContent = numberOfWins;
+        looserButtonStart.textContent = losses;
 
 // Sets origonal value to right button
 var winnerButtonStart = document.getElementById("right");
         winnerButtonStart.textContent = numberOfWins;
 
+// Sets origonal value to right button
+var remainingButtonStart = document.getElementById("remaining");
+remainingButtonStart.textContent = numGuess;
+
+
 // Gets random song  from that list
 randomSong = songsList[Math.floor(Math.random() * songsList.length)];
 numOfBlanks = lettersInSong.length;
+
+
 console.log(randomSong);
 
 // Puts all the letters from the song in with a new aray letter by letter and spirts it out as new var with hidden checters
 lettersInSong = randomSong.split("");
+
 
 for (var i = 0; i < lettersInSong.length; i++)
     if (lettersInSong[i] === " ") {
@@ -93,46 +98,44 @@ for (var i = 0; i < lettersInSong.length; i++)
         underScore.push("_");
 
     }
+    
+
 console.log(underScore);
 console.log(lettersInSong);
 
 //  If somg title is a match dispaly data for the random song
 if (randomSong === songs[0].title) {
     console.log(songs[0].fact1);
-    var song1Selected = document.getElementById("game");
-    song1Selected.textContent = "Here's your first hint: " + songs[0].fact1;
+    var song1Selected = document.getElementById("hint1");
+    song1Selected.textContent = songs[0].fact1;
     var song1Title = document.getElementById("selected");
     song1Title.textContent = underScore;
 }
 if (randomSong === songs[1].title) {
     console.log(songs[1].fact1);
-    var song1Selected = document.getElementById("game");
-    song1Selected.textContent = "Here's your first hint: " + songs[1].fact1;
+    var song1Selected = document.getElementById("hint1");
+    song1Selected.textContent = songs[1].fact1;
     var song1Title = document.getElementById("selected");
     song1Title.textContent = underScore;
-    if (numGuess === 15) {
-        var song1Selected = document.getElementById("game");
-        song1Selected.textContent = "Here's your second hint: " + songs[1].fact2;
-    }
 }
 if (randomSong === songs[2].title) {
     console.log(songs[2].fact1);
-    var song1Selected = document.getElementById("game");
-    song1Selected.textContent = "Here's your first hint: " + songs[2].fact1;
+    var song1Selected = document.getElementById("hint1");
+    song1Selected.textContent = songs[2].fact1;
     var song1Title = document.getElementById("selected");
     song1Title.textContent = underScore;
 }
 if (randomSong === songs[3].title) {
     console.log(songs[3].fact1);
-    var song1Selected = document.getElementById("game");
-    song1Selected.textContent = "Here's your first hint: " + songs[3].fact1;
+    var song1Selected = document.getElementById("hint1");
+    song1Selected.textContent = songs[3].fact1;
     var song1Title = document.getElementById("selected");
     song1Title.textContent = underScore;
 }
 if (randomSong === songs[4].title) {
     console.log(songs[4].fact1);
-    var song1Selected = document.getElementById("game");
-    song1Selected.textContent = "Here's your first hint: " + songs[4].fact1;
+    var song1Selected = document.getElementById("hint1");
+    song1Selected.textContent = songs[4].fact1;
     var song1Title = document.getElementById("selected");
     song1Title.textContent = underScore;
 }
@@ -179,51 +182,50 @@ document.onkeyup = function (event) {
 
     //  Adds hints to the page when they hit 15 and 10 guesses 
     if ((numGuess === 15) && (randomSong === songs[0].title)) {
-        var song1Selectedf2 = document.getElementById("fact2");
-        song1Selectedf2.textContent = "Here's yoru second hint: " + songs[0].fact2;
+        var song0Selected15 = document.getElementById("hint2");
+        song0Selected15.textContent = songs[0].fact2;
     }
     if ((numGuess === 10) && (randomSong === songs[0].title)) {
-        var song1Selectedf2 = document.getElementById("fact3");
-        song1Selectedf2.textContent = "Here's yoru third hint: " + songs[0].fact3;
+        var song0Selected10 = document.getElementById("hint3");
+        song0Selected10.textContent = songs[0].fact3;
     }
     if ((numGuess === 15) && (randomSong === songs[1].title)) {
-        var song1Selectedf2 = document.getElementById("fact2");
-        song1Selectedf2.textContent = "Here's yoru second hint: " + songs[1].fact2;
+        var song1Selected15 = document.getElementById("hint2");
+        song1Selected15.textContent = songs[1].fact2;
     }
     if ((numGuess === 10) && (randomSong === songs[1].title)) {
-        var song1Selectedf2 = document.getElementById("fact3");
-        song1Selectedf2.textContent = "Here's yoru third hint: " + songs[1].fact3;
+        var song1Selected10 = document.getElementById("hint3");
+        song1Selected10.textContent = songs[1].fact3;
     }
     if ((numGuess === 15) && (randomSong === songs[2].title)) {
-        var song1Selectedf2 = document.getElementById("fact2");
-        song1Selectedf2.textContent = "Here's yoru second hint: " + songs[2].fact2;
+        var song2Selected15 = document.getElementById("hint2");
+        song2Selected15.textContent = songs[2].fact2;
     }
     if ((numGuess === 10) && (randomSong === songs[2].title)) {
-        var song1Selectedf2 = document.getElementById("fact3");
-        song1Selectedf2.textContent = "Here's yoru third hint: " + songs[2].fact3;
+        var song2Selected10 = document.getElementById("hint3");
+        song2Selected10.textContent = songs[2].fact3;
     }
     if ((numGuess === 15) && (randomSong === songs[3].title)) {
-        var song1Selectedf2 = document.getElementById("fact2");
-        song1Selectedf2.textContent = "Here's yoru second hint: " + songs[3].fact2;
+        var song3Selected15 = document.getElementById("hint2");
+        song3Selected15.textContent = songs[3].fact2;
     }
     if ((numGuess === 10) && (randomSong === songs[3].title)) {
-        var song1Selectedf2 = document.getElementById("fact3");
-        song1Selectedf2.textContent = "Here's yoru third hint: " + songs[3].fact3;
+        var song3Selected10 = document.getElementById("hint3");
+        song3Selected10.textContent = songs[3].fact3;
     }
-    if ((numGuess === 15) && (randomSong === songs[4].title)) {
-        var song1Selectedf2 = document.getElementById("fact2");
-        song1Selectedf2.textContent = "Here's yoru second hint: " + songs[4].fact2;
+    if ((numGuess === 15) && (randomSong === songs[4].game)) {
+        var song4Selected15 = document.getElementById("hint2");
+        song4Selected15.textContent = songs[4].fact2;
     }
-    if ((numGuess === 10) && (randomSong === songs[4].title)) {
-        var song1Selectedf2 = document.getElementById("fact3");
-        song1Selectedf2.textContent = "Here's yoru third hint: " + songs[4].fact3;
+    if ((numGuess === 10) && (randomSong === songs[4].game)) {
+        var song4Selected10 = document.getElementById("hint3");
+        song4Selected10.textContent = songs[4].fact3;
     }
     if(numGuess < 1) {
         losses++;
-        var looser = document.getElementById("loose");
-        looser.textContent = losses;
         var looserButton = document.getElementById("wrong");
         looserButton.textContent = losses;
+        numGuess = 15;
     }
     if (lettersInSong.toString() === underScore.toString()) {
         console.log("You WIN!!!!!!");
