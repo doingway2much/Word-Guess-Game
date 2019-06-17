@@ -11,7 +11,7 @@ body {
     /* background-repeat: no-repeat; */
     background-size: cover;
     color: white;
-    margin-bottom: 5px;    
+    margin-bottom: 15px;    
 }
 
 .col-md-3 {
@@ -19,5 +19,11 @@ body {
 
 }
 .col-md-6 {
+    color: white;
+}
+#selected {
+    font-size: 30px;
+}
+#remaining {
     color: white;
 }
