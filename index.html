@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bevan&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Bevan|Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Bevan|Bowlby+One+SC&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -23,17 +24,17 @@
 
     <div class="container-fluid">
         <div class="jumbotron jumbotron-fluid">
-                <h1 class="display-4">90's Hip Hop Trivia game</h1>
-                <p class="lead">Random 90's Hip Hop Hang Man.....</p>
-            </div>
+            <h1 class="display-4">90's Hip Hop Trivia game</h1>
+            <p class="lead">Random 90's Hip Hop Hang Man.....</p>
+        </div>
         <div class="main">
-        <div class="row">
-        <!-- <div class="col-sm-1 "></div> -->
-            <!-- <div class="col-md-3"> -->
+            <div class="row">
+                <!-- <div class="col-sm-1 "></div> -->
+                <!-- <div class="col-md-3"> -->
                 <div class="card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Card title</h5> -->
-                        <h6 class="card-subtitle mb-2 text-muted ">Welcome!!!</h6>
+                        <h6 id="title" class="card-subtitle mb-2 ">Welcome!!!</h6>
                         <p id="intro" class="card-text"></p>
                         <p>Guess from random songs from Hip Hop from the 90's. If youu taking too man guesses we
                             will give you clues to help you out.</p>
@@ -45,41 +46,69 @@
                 </div>
             </div>
             <div class="row">
-            <!-- <div class="col-md-3"> -->
+                    <!-- <div class="col-sm-3"></div> -->
+                <div class="col-sm-3">
+                    <!-- <div class="card">
+                        <div class="card-body"> -->
+                            <p>Wins:</p>
+                            <button id="right" type="button" class="btn btn-secondary"></button>
+                        <!-- </div>
+                    </div> -->
+                </div>
+                <div class="col-sm-3">
+                    <!-- <div class="card">
+                        <div class="card-body"> -->
+                            <p>Losses:</p>
+                            <button id="wrong" type="button" class="btn btn-secondary"></button>
+                        <!-- </div>
+                    </div> -->
+                </div>
+                <div class="col-sm-3">
+                        <!-- <div class="card card-end">
+                            <div class="card-body"> -->
+                                    <p>Guesses remaing:</p>
+                                    <button id="remaining" type="button" class="btn btn-secondary"></button>
+                            <!-- </div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="col-sm-3"></div> -->
+            </div>
+            <div class="row">
+                <!-- <div class="col-md-3"> -->
                 <div class="card">
                     <div id="brick" class="card-body">
                         <!-- <h5 class="card-title">Card title</h5> -->
-                        <h6 class="card-subtitle mb-2 text-muted">Take a guess</h6>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Take a guess</h6> -->
                         <p id="selected" class="card-text"></p>
-            
+                        <div class="row row-inner">
+                        <p id="title">History:</p>
+                    </div>
+                        <div id="history"></div>
+                    
                     </div>
                 </div>
             </div>
             <div class="row">
-            <!-- <div class="col-md-3"> -->
+                <!-- <div class="col-md-3"> -->
                 <div class="card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Card title</h5> -->
-                        <h6 class="card-subtitle mb-2 text-muted">Hints:</h6>
+                        <h6 id="title" class="card-subtitle mb-2 ">Hints:</h6>
                         <p id="hint1" class="card-text"></p>
                         <p id="hint2" class="card-text"></p>
                         <p id="hint3" class="card-text"></p>
-                        <p>History of your guesses:</p>
-                        <div id="history"></div>
-                        <p>Wins:</p>
-                        <button id="right" type="button" class="btn btn-secondary">Success</button>
-                        <p>Losses:</p>
-                        <button id="wrong" type="button" class="btn btn-secondary">Danger</button>
-                        <p>Guesses remaing:</p>
-                        <button id="remaining" type="button" class="btn btn-secondary">Danger</button>
+                       
+
+
+                        
                     </div>
                 </div>
             </div>
         </div>
-                    <!-- <div class="col-sm-1 "></div> -->
-                </div>
-            </div>
-        </div>
+        <!-- <div class="col-sm-1 "></div> -->
+    </div>
+    </div>
+    </div>
     <!-- </div> -->
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
