@@ -56,7 +56,7 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var underScore = [];
 var numSpaces = 0;
 var progress = [];
-var numGuess = 15;
+var numGuess = 25;
 // var getRandomSong = "";
 
 // Gets lists of song titles from the object
@@ -99,7 +99,6 @@ for (var i = 0; i < lettersInSong.length; i++)
 
     }
     
-
 console.log(underScore);
 console.log(lettersInSong);
 
@@ -182,50 +181,55 @@ document.onkeyup = function (event) {
 
     //  Adds hints to the page when they hit 15 and 10 guesses 
     if ((numGuess === 15) && (randomSong === songs[0].title)) {
-        var song0Selected15 = document.getElementById("hint2");
-        song0Selected15.textContent = songs[0].fact2;
+        var song0Selected10 = document.getElementById("hint2");
+        song0Selected10.textContent = songs[0].fact2;
     }
-    if ((numGuess === 10) && (randomSong === songs[0].title)) {
-        var song0Selected10 = document.getElementById("hint3");
-        song0Selected10.textContent = songs[0].fact3;
+    if ((numGuess === 5) && (randomSong === songs[0].title)) {
+        var song0Selected5 = document.getElementById("hint3");
+        song0Selected5.textContent = songs[0].fact3;
     }
     if ((numGuess === 15) && (randomSong === songs[1].title)) {
-        var song1Selected15 = document.getElementById("hint2");
-        song1Selected15.textContent = songs[1].fact2;
+        var song1Selected10 = document.getElementById("hint2");
+        song1Selected10.textContent = songs[1].fact2;
     }
-    if ((numGuess === 10) && (randomSong === songs[1].title)) {
-        var song1Selected10 = document.getElementById("hint3");
-        song1Selected10.textContent = songs[1].fact3;
+    if ((numGuess === 5) && (randomSong === songs[1].title)) {
+        var song1Selected5 = document.getElementById("hint3");
+        song1Selected5.textContent = songs[1].fact3;
     }
     if ((numGuess === 15) && (randomSong === songs[2].title)) {
-        var song2Selected15 = document.getElementById("hint2");
-        song2Selected15.textContent = songs[2].fact2;
+        var song2Selected10 = document.getElementById("hint2");
+        song2Selected10.textContent = songs[2].fact2;
     }
-    if ((numGuess === 10) && (randomSong === songs[2].title)) {
-        var song2Selected10 = document.getElementById("hint3");
-        song2Selected10.textContent = songs[2].fact3;
+    if ((numGuess === 5) && (randomSong === songs[2].title)) {
+        var song2Selected5 = document.getElementById("hint3");
+        song2Selected5.textContent = songs[2].fact3;
     }
     if ((numGuess === 15) && (randomSong === songs[3].title)) {
-        var song3Selected15 = document.getElementById("hint2");
-        song3Selected15.textContent = songs[3].fact2;
+        var song3Selected10 = document.getElementById("hint2");
+        song3Selected10.textContent = songs[3].fact2;
     }
-    if ((numGuess === 10) && (randomSong === songs[3].title)) {
-        var song3Selected10 = document.getElementById("hint3");
-        song3Selected10.textContent = songs[3].fact3;
+    if ((numGuess === 5) && (randomSong === songs[3].title)) {
+        var song3Selected5 = document.getElementById("hint3");
+        song3Selected5.textContent = songs[3].fact3;
     }
-    if ((numGuess === 15) && (randomSong === songs[4].game)) {
-        var song4Selected15 = document.getElementById("hint2");
-        song4Selected15.textContent = songs[4].fact2;
+    if ((numGuess === 15) && (randomSong === songs[4].title)) {
+        var song4Selected10 = document.getElementById("hint2");
+        song4Selected10.textContent = songs[4].fact2;
     }
-    if ((numGuess === 10) && (randomSong === songs[4].game)) {
-        var song4Selected10 = document.getElementById("hint3");
-        song4Selected10.textContent = songs[4].fact3;
+    if ((numGuess === 5) && (randomSong === songs[4].title)) {
+        var song4Selected5 = document.getElementById("hint3");
+        song4Selected5.textContent = songs[4].fact3;
     }
     if(numGuess < 1) {
         losses++;
         var looserButton = document.getElementById("wrong");
         looserButton.textContent = losses;
-        numGuess = 15;
+        numGuess = 25;
+        var end = document.getElementById("selected");
+            end.textContent = "GAME OVER";
+            alert("GAME OVER");
+            userGuessed = [];
+            
     }
     if (lettersInSong.toString() === underScore.toString()) {
         console.log("You WIN!!!!!!");
