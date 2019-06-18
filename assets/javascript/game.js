@@ -98,13 +98,17 @@ var getSong = function () {
 getSong();
 // Puts all the letters from the song in with a new aray letter by letter and spirts it out as new var with hidden checters
 
-
+var clearHint2 = function() {
+    var clearSelected = document.getElementById("hint2");
+        clearSelected.textContent = "";
+}
 
 console.log(underScore);
 console.log(lettersInSong);
 console.log(lettersInSong.join(''));
 
 //  If somg title is a match dispaly data for the random song
+var newSong = function () {
 if (randomSong === songs[0].title) {
     console.log(songs[0].fact1);
     var song1Selected = document.getElementById("hint1");
@@ -139,8 +143,9 @@ if (randomSong === songs[4].title) {
     song1Selected.textContent = songs[4].fact1;
     var song1Title = document.getElementById("selected");
     song1Title.textContent = underScore.join(" ");
-}
+}}
 
+newSong();
 var newGame = document.getElementById("instructions");
 newGame.textContent = "This is a new game";
 
@@ -172,8 +177,6 @@ document.onkeyup = function (event) {
             console.log(letterInWord);
         }
     }
-
-    
 
     if (!letterInWord) {
         numGuess--;
@@ -223,6 +226,7 @@ document.onkeyup = function (event) {
         var song4Selected5 = document.getElementById("hint3");
         song4Selected5.textContent = songs[4].fact3;
     }
+    // If user runs out of gueses 
     if(numGuess < 1) {
         losses++;
         var looserButton = document.getElementById("wrong");
@@ -234,9 +238,12 @@ document.onkeyup = function (event) {
             var remainingButton = document.getElementById("remaining");
             remainingButton.textContent = numGuess;
             getSong();
+            newSong();
+            clearHint2();
             var song1Title = document.getElementById("selected");
             song1Title.textContent = underScore.join(" ");
             }   
+//  Playes song if the user gussed the right song
  if (lettersInSong.toString() === underScore.toString()) {
     if(randomSong === songs[0].title) {
         var regulate = new Audio("assets/audio/Player.mp3");
@@ -258,6 +265,7 @@ document.onkeyup = function (event) {
         var regulate = new Audio("assets/audio/Regulate.mp3");
         regulate.play();
      }
+    //  Final win logic and resets
     numberOfWins++;
     var winner = document.getElementById("right");
     winner.textContent = numberOfWins;
@@ -267,6 +275,8 @@ document.onkeyup = function (event) {
     var remainingButton = document.getElementById("remaining");
     remainingButton.textContent = numGuess;
     getSong();
+    newSong();
+    clearHint2();
     var song1Title = document.getElementById("selected");
     song1Title.textContent = underScore.join(" ");
     }   

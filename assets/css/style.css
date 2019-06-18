@@ -1,6 +1,5 @@
 body {
     background-color: black;
-    /* background-image: url("../img/map.JPG"); */
     background-color: black;
     background-size: cover;
 }
@@ -9,7 +8,7 @@ p {
     word-wrap: break-word;
 }
 .main {
-    /* max-width: 950px; */
+
     margin: 0 auto;
 }
 h1 {
@@ -40,9 +39,6 @@ h6 {
 }
 .col-sm-3 {
     background-color: #444444;
-    /* border-radius: 25px;
-    border: 2px solid fuchsia; */
-    /* background-color: black; */
     color: greenyellow;
     padding-bottom: 8px;
     font-weight: bold;
@@ -58,8 +54,6 @@ h6 {
 .jumbotron-fluid {
     margin: 0;
     background-image: url("../img/90sGame2.jpg");
-    /* background-repeat: no-repeat; */
-    /* width: auto; */
     background-size: cover;
     color: white;
     margin-bottom: 15px;    
@@ -85,14 +79,9 @@ h6 {
     text-align: center;
     
 }
-.col-md-3 {
-    /* background-color: black; */
-    /* background-color: #434343; */
 
-}
 .col-md-4 {
     margin-top: 15px;
-    /* color: white; */
     width: auto;
     background-color: black;
 }
