@@ -146,8 +146,6 @@ if (randomSong === songs[4].title) {
 }}
 
 newSong();
-var newGame = document.getElementById("instructions");
-newGame.textContent = "This is a new game";
 
 // Create user variable for user guess on key press
 document.onkeyup = function (event) {
