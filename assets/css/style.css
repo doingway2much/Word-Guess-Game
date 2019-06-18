@@ -1,5 +1,6 @@
 body {
-    background-image: url("../img/map2.JPG");
+    background-image: url("../img/map.JPG");
+    background-color: black;
     background-size: cover;
 }
 
